@@ -37,6 +37,9 @@ function woodCalculator(chair, table, bed){
 var totalWoodCount = woodCalculator(10, 3, 3);
 console.log(totalWoodCount);
 
+
+
+
 // Problem 3: Brick Calculator
 
     function brickCalculator(floorNum){
