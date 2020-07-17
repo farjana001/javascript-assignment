@@ -34,8 +34,8 @@ function woodCalculator(chair, table, bed){
     return totalWood;
 }
 
-var totalOutput = woodCalculator(10, 3, 3);
-console.log(totalOutput);
+var totalWoodCount = woodCalculator(10, 3, 3);
+console.log(totalWoodCount);
 
 // Problem 3: Brick Calculator
 
@@ -57,22 +57,22 @@ console.log(totalOutput);
         }
         return floorLength;
     }
-    var finalOutput = brickCalculator(8);
-    console.log(finalOutput);
+    var totalBrickCount = brickCalculator(8);
+    console.log(totalBrickCount);
 
 
 
 
-// Prob 4: Tiny Friend
+// Problem 4: Tiny Friend
 
-function tinyFriend(friend) {
+function tinyFriend(friendsName) {
 
     var shortest = [0];
   
-    if (friend.length > 0) {
-      for (let i = 0; i < friend.length; i++) {
-        if (typeof friend[i] === 'string' && (shortest == 0 || friend[i].length < shortest.length )) {
-          shortest = friend[i];
+    if (friendsName.length > 0) {
+      for (let i = 0; i < friendsName.length; i++) {
+        if (typeof friendsName[i] === 'string' && (shortest == 0 || friendsName[i].length < shortest.length )) {
+          shortest = friendsName[i];
         }
       }
     }
