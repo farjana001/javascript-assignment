@@ -1,38 +1,49 @@
 
 // Problem 1: Feet to Mile
 
-function feetToMile(feet){
-    var mile = feet / 5280;
+function feetToMile(feetInput){
+    var mile;
+    if(feetInput > 0){
+        mile = feetInput / 5280;
+        mile = mile.toFixed(8);
+    }
+    else{
+        console.log('Please enter a valid number');
+    }
     return mile;
-}
+ }
 
-var result = feetToMile(5);
-    result = result.toFixed(8);
-console.log(result);
+ var result = feetToMile(5);
+ console.log(result);
 
 
 
 //  Problem 2: Wood Calculator
 
 function woodCalculator(chair, table, bed){
-    var chairNum = chair * 1;
-    var tableNum = table * 3;
-    var bedNum = bed * 5;
-    var totalWood = chairNum + tableNum + bedNum;
+    var chairNumbers = chair * 1;
+    var tableNumbers = table * 3;
+    var bedNumbers = bed * 5;
+    
+    if(chairNumbers > 0 && tableNumbers > 0 && bedNumbers > 0){
+        var totalWood = chairNumbers + tableNumbers + bedNumbers;
+    }
+    else{
+        console.log('Please enter a valid number');
+    }
     return totalWood;
 }
 
-let totalOutput = woodCalculator(10, 3, 3);
+var totalOutput = woodCalculator(10, 3, 3);
 console.log(totalOutput);
 
-
-// Problem 3: Break Calculator
+// Problem 3: Brick Calculator
 
     function brickCalculator(floorNum){
         var perFloor = floorNum * 1000;
         var floorLength;
 
-        if(floorNum >0 && floorNum <= 10){
+        if(floorNum > 0 && floorNum <= 10){
            floorLength = perFloor * 15;
         }
         else if(floorNum > 10 && floorNum <= 20){
@@ -42,11 +53,11 @@ console.log(totalOutput);
             floorLength = (perFloor * 10) + 70000;
         }
         else{
-            console.log('please enter a valid number')
+            console.log('Please enter a valid number')
         }
         return floorLength;
     }
-    var finalOutput = brickCalculator(10);
+    var finalOutput = brickCalculator(8);
     console.log(finalOutput);
 
 
@@ -56,11 +67,11 @@ console.log(totalOutput);
 
 function tinyFriend(friend) {
 
-    let shortest = undefined;
+    var shortest = [0];
   
     if (friend.length > 0) {
       for (let i = 0; i < friend.length; i++) {
-        if (typeof friend[i] === 'string' && (shortest == undefined ||friend[i].length < shortest.length )) {
+        if (typeof friend[i] === 'string' && (shortest == 0 || friend[i].length < shortest.length )) {
           shortest = friend[i];
         }
       }
@@ -72,3 +83,5 @@ function tinyFriend(friend) {
   
   var output = tinyFriend(['Nawshad', 10, 'Mahveer', 2, 'Araf', 'Sarah', 'Yasha', 'Nira']);
   console.log('Your tiny friend is' + ' ' + output);
+
+
